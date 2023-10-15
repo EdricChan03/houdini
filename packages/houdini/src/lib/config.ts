@@ -1047,6 +1047,7 @@ export async function getConfig({
 
 		// flatten any lists of hooks
 		const plugins = pluginsNested.flat()
+		console.log('plugins', plugins)
 
 		// pass the config file through all of the plugins
 		for (const plugin of plugins) {
