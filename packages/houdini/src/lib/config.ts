@@ -1003,8 +1003,6 @@ export async function getConfig({
 			pluginConfigs.push([process.env.HOUDINI_CODEGEN_PLUGIN, {}])
 		}
 
-		console.log('pluginConfigs', pluginConfigs)
-
 		// build up the list of plugins
 		const pluginsNested: (PluginMeta | PluginMeta[])[] = []
 		for (const [pluginName, plugin_config] of pluginConfigs) {
@@ -1047,7 +1045,6 @@ export async function getConfig({
 
 		// flatten any lists of hooks
 		const plugins = pluginsNested.flat()
-		console.log('plugins', plugins)
 
 		// pass the config file through all of the plugins
 		for (const plugin of plugins) {
