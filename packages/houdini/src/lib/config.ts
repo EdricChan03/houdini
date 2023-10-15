@@ -1003,6 +1003,8 @@ export async function getConfig({
 			pluginConfigs.push([process.env.HOUDINI_CODEGEN_PLUGIN, {}])
 		}
 
+		console.log('pluginConfigs', pluginConfigs)
+
 		// build up the list of plugins
 		const pluginsNested: (PluginMeta | PluginMeta[])[] = []
 		for (const [pluginName, plugin_config] of pluginConfigs) {
